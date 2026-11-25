@@ -207,7 +207,7 @@ private fun ListsFrom(source: String?, onOpen: () -> Unit) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text(if (source == null) "cleanyourtv" else sourceName(source))
             if (source == null) {
-                // The count in the phone's own short form: 40K, 4万, 40 тыс.
+                // The count in the phone's own short form: 60K, 6万, 60 тыс.
                 val locale = LocalConfiguration.current.locales[0]
                 val stars = remember(locale) { CompactDecimalFormat.getInstance(locale, CompactDecimalFormat.CompactStyle.SHORT).format(CLEANYOURTV_STARS) }
                 Spacer(Modifier.width(8.dp))
@@ -237,8 +237,8 @@ private fun SettingsRow(
     colors = ListItemDefaults.colors(containerColor = Color.Transparent),
 ) { Text(title) }
 
-/** About how many stars cleanyourtv has on GitHub, shown as "40K+". */
-private const val CLEANYOURTV_STARS = 40_000
+/** About how many stars cleanyourtv has on GitHub, shown as "60K+". */
+private const val CLEANYOURTV_STARS = 60_000
 
 internal val OpenInNew = ImageVector.Builder("OpenInNew", 24.dp, 24.dp, 24f, 24f)
     .addPath(

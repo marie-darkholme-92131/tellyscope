@@ -717,7 +717,7 @@ class ScreenshotTest {
         compose.onNodeWithText("Debloat lists").performClick()
         compose.mainClock.advanceTimeBy(1_000)
         compose.onNodeWithText("cleanyourtv").assertExists()
-        compose.onNodeWithText(" 40K+").assertExists()
+        compose.onNodeWithText(" 60K+").assertExists()
         compose.onNodeWithText("cleanyourtv").performClick()
         compose.onNodeWithText("How to use your own lists").performClick()
         assertEquals(listOf("https://github.com/Gathin23/cleanyourtv", RELEASES.removeSuffix("/releases") + "/blob/main/CONTRIBUTING.md#using-your-own-lists"), opened)
